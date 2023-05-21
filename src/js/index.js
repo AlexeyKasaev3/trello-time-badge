@@ -1,13 +1,13 @@
 const dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function getText(due) {
-    const date = new Date(due)
+    const date = new Date(due);
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const minutesFormatted = minutes < 10 ? `0${minutes}` : minutes;
     const dayWeek = date.getDay();
-    const dayFormatted = dayWeek[dayWeek];
-    return `${hours}:${minutesFormatted}, ${dayFormatted};`
+    const dayFormatted = dayOfWeek[dayWeek];
+    return `${hours}:${minutesFormatted}, ${dayFormatted}`;
 
 }
 
