@@ -1,0 +1,14 @@
+{
+  "name": "trello-time-badge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:AlexeyKasaev3/trello-time-badge.git",
+  "author": "Oleksii Kasaiev <57752437+AlexeyKasaev3@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/html/*.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
