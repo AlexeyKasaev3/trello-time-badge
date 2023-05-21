@@ -1,4 +1,4 @@
-const dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const dayOfWeek = ['*Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', '*Saturday'];
 
 function getBadge(due) {
     const date = new Date(due);
@@ -18,10 +18,10 @@ function getDaysLeftBadge(due) {
     const daysDifference = Math.ceil(difference / (1000 * 3600 * 24));
 
     let badgeColor = null;
-    if(daysDifference <= 14) badgeColor = 'yellow';
-    if(daysDifference <= 7) badgeColor = 'orange';
+    if(daysDifference <= 14) badgeColor = 'light-gray';
+    if(daysDifference <= 7) badgeColor = 'yellow';
     if(daysDifference === 0) badgeColor = 'red';
-    if(daysDifference < 0) badgeColor = 'light-gray';
+    if(daysDifference < 0) badgeColor = null;
 
     const displayedText = daysDifference === 0 ? 'Today' : `${daysDifference}d`
     return {text: displayedText, color: badgeColor};
