@@ -8,7 +8,7 @@ function getBadge(due) {
     const dayWeek = date.getDay();
     const dayFormatted = dayOfWeek[dayWeek];
     if(hours === 0 && minutes === 0) return {text: `${dayFormatted}`};
-    return {text: `${hours}:${minutesFormatted}, ${dayFormatted}`, color: 'red'};
+    return {text: `${hours}:${minutesFormatted}, ${dayFormatted}`, color: 'light-gray'};
 }
 
 function getDaysLeftBadge(due) {
