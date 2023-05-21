@@ -16,7 +16,7 @@ function getDaysLeftBadge(due) {
     const today = new Date();
     const difference = date.getTime() - today.getTime();
 
-    let badgeColor;
+    let badgeColor = null;
     if(difference <= 14) badgeColor = 'yellow';
     if(difference <= 7) badgeColor = 'orange';
     if(difference === 0) badgeColor = 'red';
@@ -24,6 +24,7 @@ function getDaysLeftBadge(due) {
 
     const daysDifference = Math.ceil(difference / (1000 * 3600 * 24));
     const displayedText = difference === 0 ? 'Today' : `${daysDifference}d`
+    return {text: displayedText, color: badgeColor};
 }
 
 window.TrelloPowerUp.initialize({
