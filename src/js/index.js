@@ -15,14 +15,14 @@ function getDaysLeftBadge(due) {
     const date = new Date(due);
     const today = new Date();
     const difference = date.getTime() - today.getTime();
+    const daysDifference = Math.ceil(difference / (1000 * 3600 * 24));
 
     let badgeColor = null;
-    if(difference <= 14) badgeColor = 'yellow';
-    if(difference <= 7) badgeColor = 'orange';
-    if(difference === 0) badgeColor = 'red';
-    if(difference < 0) badgeColor = 'light-gray';
+    if(daysDifference <= 14) badgeColor = 'yellow';
+    if(daysDifference <= 7) badgeColor = 'orange';
+    if(daysDifference === 0) badgeColor = 'red';
+    if(daysDifference < 0) badgeColor = 'light-gray';
 
-    const daysDifference = Math.ceil(difference / (1000 * 3600 * 24));
     const displayedText = difference === 0 ? 'Today' : `${daysDifference}d`
     return {text: displayedText, color: badgeColor};
 }
