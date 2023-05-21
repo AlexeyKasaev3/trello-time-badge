@@ -10,8 +10,8 @@ function getBadge(due) {
     const minutesFormatted = minutes < 10 ? `0${minutes}` : minutes;
     const dayWeek = date.getDay();
     const dayFormatted = dayOfWeek[dayWeek];
-    if(hours === 0 && minutes === 0) return {text: `${dayFormatted}, ${daysDifference}d`};
-    return {text: `${hours}:${minutesFormatted}, ${dayFormatted}, ${daysDifference}d`, color: 'red'};
+    if(hours === 0 && minutes === 0) return {text: `${dayFormatted}, ${daysDifference} d`};
+    return {text: `${hours}:${minutesFormatted}, ${dayFormatted}, ${daysDifference} d`, color: 'red'};
 }
 
 window.TrelloPowerUp.initialize({
