@@ -1,4 +1,4 @@
-const dayOfWeek = ['*Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', '*Saturday'];
+const dayOfWeek = ['SUNDAY', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'SATURDAY'];
 
 function getBadge(due) {
     const date = new Date(due);
