@@ -12,8 +12,8 @@ function getBadge(due) {
 }
 
 function getDaysLeftBadge(due) {
-    const date = new Date(due);
-    const today = new Date();
+    const date = new Date(due).setHours(0, 0, 0, 0);
+    const today = new Date().setHours(0, 0, 0, 0);
     const difference = date.getTime() - today.getTime();
     const daysDifference = Math.ceil(difference / (1000 * 3600 * 24));
 
