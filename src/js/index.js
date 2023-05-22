@@ -23,7 +23,9 @@ function getDaysLeftBadge(due) {
     if(daysDifference === 0) badgeColor = 'red';
     if(daysDifference < 0) badgeColor = null;
 
-    const displayedText = daysDifference === 0 ? 'Today' : `${daysDifference}d${daysDifference === 1 ? ' !!!' : ''}`
+    const showIfTomorrow = daysDifference === 1 ? '-!!-' : '';
+
+    const displayedText = daysDifference === 0 ? 'Today' : `${showIfTomorrow}${daysDifference}d${showIfTomorrow}`
     return {text: displayedText, color: badgeColor};
 }
 
